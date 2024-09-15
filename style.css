@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+}
+
+.weather-container {
+    width: 90%; /* Flexible width */
+    max-width: 400px;
+    min-width: 320px; /* Prevent it from being too narrow */
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between elements */
+    height: 100%; /* Ensure container takes full height */
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.weather-info {
+    text-align: center;
+}
+
+.temperature h1 {
+    font-size: 48px;
+    color: #333;
+}
+
+.temperature p {
+    color: #666;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.detail-item img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.forecast-item {
+    text-align: center;
+}
+
+.forecast-item p {
+    color: #666;
+}
+
+/* Fix the button at the bottom */
+#getLocation {
+    width: 100%; /* Make the button full width */
+    padding: 15px 0;
+    background-color: #0664b1; /* Green color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#getLocation:hover {
+    background-color: #069db1; /* Darker green on hover */
+}
+
+/* Add media query for smaller devices */
+@media screen and (max-width: 600px) {
+    .weather-container {
+        width: 95%;
+    }
+}
+
+#loading-indicator {
+    display: none;
+    font-size: 20px;
+    color: #000;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

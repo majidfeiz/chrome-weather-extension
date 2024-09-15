@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Daily Weather Extension",
+    "description": "Daily Weather Extension",
+    "version": "1.0",
+    "permissions": [
+        "geolocation"
+      ],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "weather.png"
+    }
+  }
